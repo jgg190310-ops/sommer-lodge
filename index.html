@@ -18,11 +18,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#12252a; --ink-2:#2c4046; --deep:#0a1f25; --deeper:#06161a;
-  --cyan:#2fa9bd; --cyan-d:#19808f;
-  --paper:#f3f2ee; --panel:#e8e6df; --white:#fbfbf9;
-  --rule:rgba(18,37,42,.16); --hair:rgba(18,37,42,.09);
-  --sh:0 24px 60px -34px rgba(10,31,37,.6);
+  --ink:#edf1f0; --ink-2:#a7bcc1; --deep:#071519; --deeper:#040f12;
+  --cyan:#36b9cf; --cyan-d:#5cc8da;
+  --paper:#0b181c; --panel:#15282e; --white:#132429;
+  --rule:rgba(237,241,240,.18); --hair:rgba(237,241,240,.10);
+  --sh:0 24px 60px -34px rgba(0,0,0,.92);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -54,9 +54,9 @@ h2.big em{font-family:'Newsreader',serif;font-style:italic;font-weight:300;lette
 }
 
 #bar{position:fixed;top:0;left:0;right:0;z-index:800;
-  background:rgba(243,242,238,.6);-webkit-backdrop-filter:saturate(170%) blur(20px);backdrop-filter:saturate(170%) blur(20px);
+  background:rgba(11,24,28,.62);-webkit-backdrop-filter:saturate(170%) blur(20px);backdrop-filter:saturate(170%) blur(20px);
   border-bottom:1px solid transparent;transition:background .45s,border-color .45s,color .45s}
-#bar.solid{background:rgba(243,242,238,.94);border-bottom-color:var(--hair)}
+#bar.solid{background:rgba(11,24,28,.92);border-bottom-color:var(--hair)}
 #bar.inverse{background:rgba(10,31,37,.22);color:#f3f2ee}
 .barin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(16px,4vw,56px)}
 #prog{position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--cyan);transition:width .12s linear,opacity .4s}
@@ -332,7 +332,7 @@ footer nav a{color:rgba(243,242,238,.68);font-family:'Bricolage Grotesque',sans-
   opacity:0;visibility:hidden;transform:translateY(18px);
   transition:opacity .3s,transform .3s cubic-bezier(.2,.9,.3,1),visibility .3s}
 #dv.open{opacity:1;visibility:visible;transform:none}
-#dvbar{position:sticky;top:0;z-index:5;background:rgba(243,242,238,.95);
+#dvbar{position:sticky;top:0;z-index:5;background:rgba(11,24,28,.93);
   -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--hair)}
 #dvbar .in{max-width:1040px;margin:0 auto;padding:11px clamp(16px,4vw,32px);
   display:flex;align-items:center;justify-content:space-between;gap:14px}
@@ -387,7 +387,7 @@ footer nav a{color:rgba(243,242,238,.68);font-family:'Bricolage Grotesque',sans-
   .brand .wm{font-size:15px;letter-spacing:.12em}
   .brand .mk{width:40px;height:30px}
   #bar nav{position:fixed;top:60px;left:10px;right:10px;flex-direction:column;align-items:stretch;gap:0;
-    background:rgba(243,242,238,.98);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    background:rgba(19,36,41,.98);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
     border:1px solid var(--hair);border-radius:6px;padding:8px;color:var(--ink);
     box-shadow:var(--sh);opacity:0;visibility:hidden;transform:translateY(-8px);
     transition:opacity .28s,transform .28s,visibility .28s}

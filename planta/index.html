@@ -18,14 +18,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#12252a; --deep:#0a1f25; --deeper:#06161a;
-  --cyan:#2fa9bd; --cyan-d:#19808f;
+  --ink:#edf1f0; --deep:#071519; --deeper:#040f12;
+  --cyan:#36b9cf; --cyan-d:#5cc8da;
   --paper:#f3f2ee; --panel:#e8e6df;
   --sans:'Bricolage Grotesque',system-ui,-apple-system,sans-serif;
   --serif:'Newsreader',Georgia,serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;overflow:hidden;background:#cfe0e6;
+html,body{height:100%;overflow:hidden;background:#0b181c;
   font:300 15px/1.6 var(--serif);color:var(--ink);
   -webkit-font-smoothing:antialiased;overscroll-behavior:none}
 button{font-family:var(--sans);color:inherit;cursor:pointer;border:0;background:none}
@@ -50,9 +50,9 @@ button{font-family:var(--sans);color:inherit;cursor:pointer;border:0;background:
 
 /* ---------- cartão de título ---------- */
 .titulo{position:fixed;z-index:15;left:max(18px,env(safe-area-inset-left));top:82px;max-width:330px;
-  padding:20px 22px;border-radius:18px;background:rgba(243,242,238,.9);
+  padding:20px 22px;border-radius:18px;background:rgba(11,24,28,.78);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  border:1px solid rgba(18,37,42,.1);box-shadow:0 22px 54px -32px rgba(6,22,26,.7);
+  border:1px solid rgba(237,241,240,.14);box-shadow:0 22px 54px -32px rgba(6,22,26,.7);
   transition:opacity .35s,transform .35s}
 .titulo.fechado{opacity:0;transform:translateY(-10px);pointer-events:none}
 .titulo small{display:block;font:500 10px var(--sans);letter-spacing:.3em;
@@ -65,18 +65,18 @@ button{font-family:var(--sans);color:inherit;cursor:pointer;border:0;background:
 /* ---------- lista de ambientes ---------- */
 .amb{position:fixed;z-index:15;right:max(18px,env(safe-area-inset-right));top:82px;width:228px;
   max-height:calc(100svh - 190px);overflow:auto;padding:14px;border-radius:18px;
-  background:rgba(243,242,238,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  border:1px solid rgba(18,37,42,.1);box-shadow:0 22px 54px -32px rgba(6,22,26,.7);
+  background:rgba(11,24,28,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(237,241,240,.14);box-shadow:0 22px 54px -32px rgba(6,22,26,.7);
   scrollbar-width:thin;transition:opacity .3s,transform .3s}
 .amb h2{font:500 10px var(--sans);letter-spacing:.28em;text-transform:uppercase;
   color:var(--cyan-d);margin:2px 4px 10px}
 .amb .grupo{font:500 9.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;
-  color:#8a9ba1;margin:13px 6px 4px}
+  color:#9fb3b8;margin:13px 6px 4px}
 .amb button{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;
   text-align:left;padding:8px 10px;border-radius:10px;font:400 14px var(--serif);
   transition:background .18s}
 .amb button:hover,.amb button.ativo{background:rgba(47,169,189,.15)}
-.amb button span{display:block;font-size:11.5px;color:#7d9097;font-family:var(--serif)}
+.amb button span{display:block;font-size:11.5px;color:#93a8ae;font-family:var(--serif)}
 .amb button i{width:6px;height:6px;border-radius:50%;background:var(--cyan);flex:none;opacity:0;transition:opacity .2s}
 .amb button.ativo i{opacity:1}
 
@@ -97,14 +97,14 @@ button{font-family:var(--sans);color:inherit;cursor:pointer;border:0;background:
 
 /* ---------- rótulos 3D ---------- */
 .rot{pointer-events:auto;cursor:pointer;display:flex;align-items:center;gap:7px;
-  padding:6px 12px 6px 8px;border-radius:999px;background:rgba(243,242,238,.95);
-  color:var(--ink);border:1px solid rgba(18,37,42,.12);
+  padding:6px 12px 6px 8px;border-radius:999px;background:rgba(11,24,28,.88);
+  color:var(--ink);border:1px solid rgba(237,241,240,.16);
   box-shadow:0 7px 22px -9px rgba(6,22,26,.6);font:500 12px/1.15 var(--sans);
   white-space:nowrap;user-select:none;transition:opacity .25s,transform .2s,background .2s}
-.rot:hover{transform:scale(1.06);background:#fff}
+.rot:hover{transform:scale(1.06);background:rgba(18,36,41,.96)}
 .rot i{width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none}
 .rot.suite i{background:#d08a3c}
-.rot small{display:block;font:400 10.5px var(--serif);color:#7d9097;margin-top:1px}
+.rot small{display:block;font:400 10.5px var(--serif);color:#9fb3b8;margin-top:1px}
 .rot.compacto small{display:none}
 .rot.oculto{opacity:0;pointer-events:none}
 
@@ -127,9 +127,9 @@ button{font-family:var(--sans);color:inherit;cursor:pointer;border:0;background:
 @keyframes ld{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
 
 .nota{position:fixed;z-index:12;left:max(18px,env(safe-area-inset-left));bottom:22px;
-  font-size:11.5px;color:#3d5257;max-width:252px;line-height:1.45;
-  background:rgba(243,242,238,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  border:1px solid rgba(18,37,42,.08);padding:9px 13px;border-radius:13px}
+  font-size:11.5px;color:#c3d3d7;max-width:252px;line-height:1.45;
+  background:rgba(11,24,28,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(237,241,240,.12);padding:9px 13px;border-radius:13px}
 body.noite .nota{color:#dfe9ec;background:rgba(10,31,37,.5);border-color:rgba(255,255,255,.13)}
 @media (max-height:620px){.nota{display:none}}
 
@@ -230,7 +230,7 @@ const labelRenderer = new CSS2DRenderer({ element: document.getElementById('rotu
 labelRenderer.setSize(innerWidth, innerHeight);
 
 const scene = new THREE.Scene();
-const CEU_DIA = new THREE.Color('#cfe0e6'), CEU_NOITE = new THREE.Color('#081520');
+const CEU_DIA = new THREE.Color('#0b181c'), CEU_NOITE = new THREE.Color('#081520');
 scene.background = CEU_DIA.clone();
 scene.fog = new THREE.Fog(CEU_DIA.clone(), 72, 165);
 
