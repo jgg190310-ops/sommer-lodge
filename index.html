@@ -162,6 +162,20 @@ h2.big em{font-family:'Newsreader',serif;font-style:italic;font-weight:300;lette
 .about-pics{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;margin-top:34px}
 .about-pics .pic:first-child,.about-pics .pic:nth-child(2){aspect-ratio:3/4}
 .about-pics .pic.larga{grid-column:1/-1;aspect-ratio:16/10}
+.hist{grid-template-columns:1.25fr .75fr}
+.hist h2.big{max-width:14ch}
+.hist .about-pics{grid-template-columns:1fr}
+.hist .about-pics{gap:12px}
+.hist .pic.quadro{aspect-ratio:1/1}
+.hist .pic.quadro img{object-position:center 11%}
+.hist .pic.sol{aspect-ratio:4/3}
+.linha{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);
+  gap:clamp(16px,2.6vw,34px);margin-top:clamp(30px,4.6vh,50px);
+  border-top:1px solid var(--rule);padding-top:26px}
+.linha li{display:flex;flex-direction:column;gap:7px}
+.linha b{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(21px,2.7vw,31px);
+  font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--cyan-d)}
+.linha span{font-size:15.5px;line-height:1.6;color:var(--ink-2)}
 .pic{position:relative;overflow:hidden;background:var(--panel);border-radius:3px}
 .pic img{width:100%;height:100%;object-fit:cover}
 
@@ -375,6 +389,8 @@ footer nav a{color:rgba(243,242,238,.68);font-family:'Bricolage Grotesque',sans-
 
 @media(max-width:1000px){
   .about{grid-template-columns:1fr;gap:34px}
+  .hist{grid-template-columns:1fr}
+  .linha{grid-template-columns:1fr 1fr;gap:22px}
   .about-pics .pic:first-child{margin-top:0}
   .near{grid-template-columns:repeat(2,1fr)}
   .loc{grid-template-columns:1fr}
@@ -429,6 +445,7 @@ footer nav a{color:rgba(243,242,238,.68);font-family:'Bricolage Grotesque',sans-
     </a>
     <nav id="nav">
       <a href="#sobre" data-pt="A casa" data-en="The lodge">A casa</a>
+      <a href="#historia" data-pt="Sobre nós" data-en="About us">Sobre nós</a>
       <a href="#suites" data-pt="Suítes" data-en="Suites">Suítes</a>
       <a href="#planta3d" data-pt="Planta 3D" data-en="3D plan">Planta 3D</a>
       <a href="#galeria" data-pt="Fotos" data-en="Photos">Fotos</a>
@@ -508,6 +525,28 @@ footer nav a{color:rgba(243,242,238,.68);font-family:'Bricolage Grotesque',sans-
         <div class="pic"><img src="fotos/jardim.webp" alt="Pergolado com buganvílias no jardim" loading="lazy"></div>
         <div class="pic"><img src="fotos/casa.webp" alt="Jardim e varanda das suítes" loading="lazy"></div>
         <div class="pic larga"><img src="fotos/churrasco.webp" alt="Área de churrasco coberta com forno a lenha de barro" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="historia">
+  <div class="wrap">
+    <p class="mark-label" data-pt="sobre nós" data-en="about us">sobre nós</p>
+    <div class="about hist">
+      <div>
+      <h2 class="big rise" data-pt="Começou na Nova Zelândia e virou um quintal em Garopaba." data-en="It began in New Zealand and became a garden in Garopaba.">Começou na Nova Zelândia e virou um quintal em Garopaba.</h2>
+      <p class="prose" style="margin-top:26px" data-pt="O Sommer Lodge começou de uma ideia que Caroline e Luís tiveram depois de muitas experiências viajando e morando em outros países. Os dois se conheceram em 2006, quando moravam e trabalhavam na Nova Zelândia. Em 2009 compraram um terreno em Garopaba e começaram a realizar um sonho. Em 2016 o Sommer Lodge nasceu. Desde então já recebemos hóspedes de diversos países." data-en="Sommer Lodge began as an idea Caroline and Luís had after years of travelling and living abroad. The two met in 2006, while living and working in New Zealand. In 2009 they bought a plot of land in Garopaba and started making a dream real. In 2016 Sommer Lodge was born. Since then we have welcomed guests from many countries.">O Sommer Lodge começou de uma ideia que Caroline e Luís tiveram depois de muitas experiências viajando e morando em outros países. Os dois se conheceram em 2006, quando moravam e trabalhavam na Nova Zelândia. Em 2009 compraram um terreno em Garopaba e começaram a realizar um sonho. Em 2016 o Sommer Lodge nasceu. Desde então já recebemos hóspedes de diversos países.</p>
+      <ol class="linha">
+      <li><b>2006</b><span data-pt="Caroline e Luís se conhecem morando e trabalhando na Nova Zelândia." data-en="Caroline and Luís meet while living and working in New Zealand.">Caroline e Luís se conhecem morando e trabalhando na Nova Zelândia.</span></li>
+      <li><b>2009</b><span data-pt="Compram o terreno em Garopaba e começam o projeto." data-en="They buy the plot of land in Garopaba and start the project.">Compram o terreno em Garopaba e começam o projeto.</span></li>
+      <li><b>2016</b><span data-pt="O Sommer Lodge abre as portas, com as quatro suítes." data-en="Sommer Lodge opens its doors, with the four suites.">O Sommer Lodge abre as portas, com as quatro suítes.</span></li>
+      <li><b data-pt="hoje" data-en="today">hoje</b><span data-pt="Hóspedes de diversos países já passaram pelo quintal." data-en="Guests from many countries have passed through the garden.">Hóspedes de diversos países já passaram pelo quintal.</span></li>
+      </ol>
+      </div>
+      <div class="about-pics">
+        <div class="pic quadro"><img src="fotos/quadro.webp" alt="Telinha de Tolaga Bay, Nova Zelândia, pintada à mão, na parede da suíte" loading="lazy"></div>
+        <div class="pic sol"><img src="fotos/porsol.webp" alt="Pôr do sol na praia, em Garopaba" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -637,6 +676,7 @@ footer nav a{color:rgba(243,242,238,.68);font-family:'Bricolage Grotesque',sans-
     </div>
     <nav>
       <a href="#sobre" data-pt="A casa" data-en="The lodge">A casa</a>
+      <a href="#historia" data-pt="Sobre nós" data-en="About us">Sobre nós</a>
       <a href="#suites" data-pt="Suítes" data-en="Suites">Suítes</a>
       <a href="#planta3d" data-pt="Planta 3D" data-en="3D plan">Planta 3D</a>
       <a href="#galeria" data-pt="Fotos" data-en="Photos">Fotos</a>
