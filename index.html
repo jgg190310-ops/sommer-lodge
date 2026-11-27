@@ -249,6 +249,11 @@ h2.big em{font-family:'Newsreader',serif;font-style:italic;font-weight:300;lette
 .gal .pic{cursor:zoom-in;height:100%}
 .gal .pic img{transition:transform .7s cubic-bezier(.2,.8,.3,1)}
 .gal .pic:hover img{transform:scale(1.045)}
+.viag-blk{margin-top:clamp(44px,6vh,70px)}
+.viag-h{font-size:clamp(23px,2.7vw,32px);font-weight:500;letter-spacing:-.025em;margin-bottom:11px}
+.viag-p{max-width:62ch}
+.viag-blk .grow{margin-top:26px}
+.viag-blk .pic{cursor:zoom-in}
 .ggroup{margin-top:58px}
 .ggroup:first-child{margin-top:34px}
 .ghead h3{font-size:clamp(23px,2.7vw,32px);font-weight:500;letter-spacing:-.025em;margin-bottom:11px}
@@ -536,7 +541,7 @@ footer nav a{color:rgba(243,242,238,.68);font-family:'Bricolage Grotesque',sans-
     <div class="about hist">
       <div>
       <h2 class="big rise" data-pt="Começou na Nova Zelândia e virou um quintal em Garopaba." data-en="It began in New Zealand and became a garden in Garopaba.">Começou na Nova Zelândia e virou um quintal em Garopaba.</h2>
-      <p class="prose" style="margin-top:26px" data-pt="O Sommer Lodge começou de uma ideia que Caroline e Luís tiveram depois de muitas experiências viajando e morando em outros países. Os dois se conheceram em 2006, quando moravam e trabalhavam na Nova Zelândia. Em 2009 compraram um terreno em Garopaba e começaram a realizar um sonho. Em 2016 o Sommer Lodge nasceu. Desde então já recebemos hóspedes de diversos países." data-en="Sommer Lodge began as an idea Caroline and Luís had after years of travelling and living abroad. The two met in 2006, while living and working in New Zealand. In 2009 they bought a plot of land in Garopaba and started making a dream real. In 2016 Sommer Lodge was born. Since then we have welcomed guests from many countries.">O Sommer Lodge começou de uma ideia que Caroline e Luís tiveram depois de muitas experiências viajando e morando em outros países. Os dois se conheceram em 2006, quando moravam e trabalhavam na Nova Zelândia. Em 2009 compraram um terreno em Garopaba e começaram a realizar um sonho. Em 2016 o Sommer Lodge nasceu. Desde então já recebemos hóspedes de diversos países.</p>
+      <p class="prose" style="margin-top:26px" data-pt="O Sommer Lodge começou de uma ideia que Caroline e Luís tiveram depois de muitas experiências viajando e morando em outros países. Os dois se conheceram em 2006, quando moravam e trabalhavam na Nova Zelândia. De lá em diante vieram outras viagens pela Oceania, pela Ásia e pela Europa. Em 2009 compraram um terreno em Garopaba e começaram a realizar um sonho. Em 2016 o Sommer Lodge nasceu. Desde então já recebemos hóspedes de diversos países." data-en="Sommer Lodge began as an idea Caroline and Luís had after years of travelling and living abroad. The two met in 2006, while living and working in New Zealand. More travelling followed, across Oceania, Asia and Europe. In 2009 they bought a plot of land in Garopaba and started making a dream real. In 2016 Sommer Lodge was born. Since then we have welcomed guests from many countries.">O Sommer Lodge começou de uma ideia que Caroline e Luís tiveram depois de muitas experiências viajando e morando em outros países. Os dois se conheceram em 2006, quando moravam e trabalhavam na Nova Zelândia. De lá em diante vieram outras viagens pela Oceania, pela Ásia e pela Europa. Em 2009 compraram um terreno em Garopaba e começaram a realizar um sonho. Em 2016 o Sommer Lodge nasceu. Desde então já recebemos hóspedes de diversos países.</p>
       <ol class="linha">
       <li><b>2006</b><span data-pt="Caroline e Luís se conhecem morando e trabalhando na Nova Zelândia." data-en="Caroline and Luís meet while living and working in New Zealand.">Caroline e Luís se conhecem morando e trabalhando na Nova Zelândia.</span></li>
       <li><b>2009</b><span data-pt="Compram o terreno em Garopaba e começam o projeto." data-en="They buy the plot of land in Garopaba and start the project.">Compram o terreno em Garopaba e começam o projeto.</span></li>
@@ -548,6 +553,12 @@ footer nav a{color:rgba(243,242,238,.68);font-family:'Bricolage Grotesque',sans-
         <div class="pic quadro"><img src="fotos/quadro.webp" alt="Telinha de Tolaga Bay, Nova Zelândia, pintada à mão, na parede da suíte" loading="lazy"></div>
         <div class="pic sol"><img src="fotos/porsol.webp" alt="Pôr do sol na praia, em Garopaba" loading="lazy"></div>
       </div>
+    </div>
+    <div class="viag-blk rise">
+      <p class="mark-label" data-pt="as viagens" data-en="the travels">as viagens</p>
+      <h3 class="viag-h" data-pt="Oceânia, Ásia e Europa, antes do quintal em Garopaba." data-en="Oceania, Asia and Europe, before the garden in Garopaba.">Oceânia, Ásia e Europa, antes do quintal em Garopaba.</h3>
+      <p class="prose viag-p" data-pt="Boa parte do que o Sommer Lodge virou veio da estrada: os anos na Nova Zelândia, as viagens pela Ásia e pela Europa, e o jeito de receber que a gente aprendeu sendo hóspede por aí." data-en="Much of what Sommer Lodge became came from the road: the years in New Zealand, the trips through Asia and Europe, and a way of hosting we learnt as guests ourselves.">Boa parte do que o Sommer Lodge virou veio da estrada: os anos na Nova Zelândia, as viagens pela Ásia e pela Europa, e o jeito de receber que a gente aprendeu sendo hóspede por aí.</p>
+      <div class="grow" id="viag"></div>
     </div>
   </div>
 </section>
@@ -801,10 +812,17 @@ var GALG=[
      ['fotos/nat-borboleta.webp','Borboleta-coruja no tronco','An owl butterfly on a trunk'],
      ['fotos/nat-gamba.webp','Gamb\u00e1-de-orelha-branca no muro','A white-eared opossum on the wall'],
      ['fotos/cachoeira.webp','Cachoeira no meio da mata','A waterfall in the forest'],
-     ['fotos/baleia.webp','Baleia franca na costa','A right whale off the coast'],
      ['fotos/nat-hibisco.webp','Hibisco rosa aberto no jardim','A pink hibiscus open in the garden'],
      ['fotos/nat-hibisco-2.webp','Hibisco vermelho rajado de branco','A red hibiscus streaked with white'],
      ['fotos/nat-cacto.webp','Flores amarelas no cacto da restinga','Yellow flowers on a dune cactus']]},
+
+ {lp:'baleias',le:'whales',
+  tp:'Baleia franca na costa, de junho a novembro',te:'Right whales off the coast, June to November',
+  dp:'Todo inverno as baleias francas chegam pra parir e amamentar no litoral sul catarinense. D\u00e1 pra ver do cost\u00e3o, da praia ou de barco, a poucos minutos daqui.',
+  de:'Every winter right whales come to calve and nurse along the southern Santa Catarina coast. You can watch them from the point, from the beach or by boat, minutes from here.',
+  f:[['fotos/baleia.webp','Baleia franca na costa','A right whale off the coast'],
+     ['fotos/baleia-3.webp','Baleia franca com o filhote em \u00e1gua rasa','A right whale with her calf in shallow water'],
+     ['fotos/baleia-2.webp','Cauda de baleia batendo na \u00e1gua','A whale\u2019s tail slapping the water']]},
 
  {lp:'surfland',le:'surfland',
   tp:'A piscina de ondas a cem metros',te:'The wave pool a hundred metres away',
@@ -824,7 +842,26 @@ var GALG=[
      ['fotos/praia-4.webp','Onda quebrando perto do cost\u00e3o','A wave breaking near the point'],
      ['fotos/rosa.webp','Praia do Rosa','Praia do Rosa'],
      ['fotos/porsol.webp','P\u00f4r do sol na praia','Sunset on the beach'],
-     ['fotos/praia-costao.webp','Praia e cost\u00e3o de pedras','Beach and rocky point']]}
+     ['fotos/praia-costao.webp','Praia e cost\u00e3o de pedras','Beach and rocky point'],
+     ['fotos/piscina-natural.webp','Piscina natural entre as pedras do cost\u00e3o','A natural pool among the rocks of the point'],
+     ['fotos/praia-porsol.webp','Fim de tarde na beira da praia','Late afternoon by the beach'],
+     ['fotos/porsol-2.webp','C\u00e9u vermelho no fim do dia sobre a lagoa','A red sky over the lagoon at the end of the day']]}
+];
+
+var VIAG=[
+ ['fotos/v-cristo.webp','No Cristo Redentor, no Rio de Janeiro','At Christ the Redeemer, in Rio de Janeiro'],
+ ['fotos/v-londres.webp','Em frente ao Big Ben, em Londres','In front of Big Ben, in London'],
+ ['fotos/v-buda.webp','Buda dourado num templo budista na \u00c1sia','A golden Buddha in a temple in Asia'],
+ ['fotos/v-templo.webp','Dentro de um templo, no Sudeste Asi\u00e1tico','Inside a temple, in Southeast Asia'],
+ ['fotos/v-onda-2.webp','Tubo numa praia da Oce\u00e2nia','A barrel on a beach in Oceania'],
+ ['fotos/v-karen.webp','Tecelagem e artesanato numa vila do Sudeste Asi\u00e1tico','Weaving and crafts in a village in Southeast Asia'],
+ ['fotos/v-tulipas.webp','Campo de tulipas no fim de tarde','A field of tulips in the late afternoon'],
+ ['fotos/v-onda-1.webp','Onda quebrando perto das pedras','A wave breaking near the rocks'],
+ ['fotos/v-bali.webp','Drag\u00e3o de uma festa tradicional na \u00c1sia','A dragon from a traditional festival in Asia'],
+ ['fotos/v-templo-2.webp','Num templo de arquitetura chinesa','At a temple in Chinese style'],
+ ['fotos/v-relogio.webp','Torre do rel\u00f3gio entre as palmeiras','A clock tower among the palm trees'],
+ ['fotos/v-onda-3.webp','Mar cinza e onda boa na Oce\u00e2nia','Grey sky and a good wave in Oceania'],
+ ['fotos/v-canterbury.webp','Canterbury, na Inglaterra, na primavera','Canterbury, England, in spring']
 ];
 
 var GAL=[];
@@ -922,6 +959,22 @@ function renderGal(){
       '<div class="grow">'+pics+'</div></div>';
   }).join('');
 }
+var viagEl=document.getElementById('viag');
+function viagList(){return VIAG.map(function(v){return [v[0],L==='pt'?v[1]:v[2]];});}
+function renderViag(){
+  viagEl.innerHTML=VIAG.map(function(v,i){
+    return pic(v[0],L==='pt'?v[1]:v[2],'',' data-v="'+i+'" tabindex="0" role="button"');
+  }).join('');
+}
+viagEl.addEventListener('click',function(e){
+  var el=e.target.closest('[data-v]');if(!el)return;
+  openLb(viagList(),parseInt(el.getAttribute('data-v'),10));
+});
+viagEl.addEventListener('keydown',function(e){
+  if(e.key!=='Enter'&&e.key!==' ')return;
+  var el=e.target.closest('[data-v]');
+  if(el){e.preventDefault();openLb(viagList(),parseInt(el.getAttribute('data-v'),10));}
+});
 function renderNear(){
   document.getElementById('near').innerHTML=NEAR.map(function(n){
     return '<article>'+pic(n.s,L==='pt'?n.p:n.e,'')+
@@ -936,7 +989,7 @@ function renderFaq(){
       '<div class="a">'+esc(L==='pt'?f.ap:f.ae)+'</div></details>';
   }).join('');
 }
-renderSuites();renderAmen();renderGal();renderNear();renderFaq();obsAll();
+renderSuites();renderAmen();renderGal();renderViag();renderNear();renderFaq();obsAll();
 
 var dv=document.getElementById('dv'),lastFocus=null,dvI=0;
 function openDv(i){
@@ -1125,7 +1178,7 @@ function setLang(l){
     if(v!=null)el.innerHTML=v;
   });
   btns.forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===l);});
-  renderSuites();renderAmen();renderGal();renderNear();renderFaq();obsAll();
+  renderSuites();renderAmen();renderGal();renderViag();renderNear();renderFaq();obsAll();
   if(dv.classList.contains('open'))closeDv();
   if(lb.classList.contains('open'))closeLb();
   try{localStorage.setItem('sl-lang',l);}catch(e){}
